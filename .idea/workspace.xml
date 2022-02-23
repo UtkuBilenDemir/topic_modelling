@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b6062cc-ca84-4d8e-b022-23b8d99c9ff2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/0.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/11.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/11.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/11a.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/11aa.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/12.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/12.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/12a.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/12b.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/12b.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/13a.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/13a.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/13aa.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/13b.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/13b.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/13c.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/13c.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/22.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/22.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/23.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/23b.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/23b.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/embed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/diagrams/test.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/notes/script.Rmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/fullscreen/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/reveal-js-presentation.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/visualizations/coherence.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/visualizations/presentation_reveal.js_visualizations_coherence.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/visualizations/test10_newlemma.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/reveal.js/visualizations/test9_15x030_lemma.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/.github/FUNDING.yml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/.github/FUNDING.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/.github/workflows/js.yml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/.github/workflows/js.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/print/paper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/print/paper.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/print/pdf.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/print/pdf.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/reveal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/reveal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/beige.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/beige.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/black.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/black.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/blood.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/blood.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/league.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/league.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/moon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/moon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/night.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/night.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/serif.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/serif.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/simple.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/simple.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/sky.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/sky.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/solarized.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/solarized.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/white.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/source/white.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/template/exposer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/template/exposer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/template/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/template/mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/template/settings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/template/settings.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/css/theme/template/theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/css/theme/template/theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/reveal.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/reveal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/reveal.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/reveal.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/reveal.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/reveal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/beige.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/beige.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/black.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/black.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/blood.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/blood.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/fonts/league-gothic/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/fonts/league-gothic/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/fonts/league-gothic/league-gothic.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/fonts/league-gothic/league-gothic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/fonts/source-sans-pro/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/fonts/source-sans-pro/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/fonts/source-sans-pro/source-sans-pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/fonts/source-sans-pro/source-sans-pro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/league.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/league.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/moon.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/moon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/night.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/night.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/serif.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/serif.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/simple.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/simple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/sky.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/sky.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/solarized.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/solarized.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/white.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/dist/theme/white.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/assets/beeping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/assets/beeping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/assets/beeping.wav" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/assets/beeping.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/assets/image1.png" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/assets/image1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/assets/image2.png" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/assets/image2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/auto-animate.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/auto-animate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/backgrounds.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/backgrounds.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/barebones.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/barebones.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/layout-helpers.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/layout-helpers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/markdown.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/markdown.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/markdown.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/math.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/math.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/media.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/media.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/multiple-presentations.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/multiple-presentations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/examples/transitions.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/examples/transitions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/components/playback.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/components/playback.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/autoanimate.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/autoanimate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/backgrounds.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/backgrounds.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/controls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/focus.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/focus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/fragments.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/fragments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/keyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/keyboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/location.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/location.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/notes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/overview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/pointer.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/pointer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/print.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/print.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/progress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/slidecontent.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/slidecontent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/slidenumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/slidenumber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/touch.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/controllers/touch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/reveal.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/reveal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/utils/color.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/utils/color.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/utils/device.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/utils/device.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/utils/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/utils/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/js/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/js/utils/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/highlight/highlight.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/highlight/highlight.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/highlight/highlight.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/highlight/highlight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/highlight/monokai.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/highlight/monokai.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/highlight/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/highlight/plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/highlight/zenburn.css" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/highlight/zenburn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/markdown/markdown.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/markdown/markdown.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/markdown/markdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/markdown/markdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/math/math.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/math/math.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/math/math.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/math/math.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/notes/notes.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/notes/notes.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/notes/notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/notes/notes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/notes/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/notes/plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/notes/speaker-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/notes/speaker-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/search/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/search/plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/search/search.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/search/search.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/search/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/zoom/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/zoom/plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/zoom/zoom.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/zoom/zoom.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/plugin/zoom/zoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/plugin/zoom/zoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/assets/external-script-a.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/assets/external-script-a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/assets/external-script-b.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/assets/external-script-b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/assets/external-script-c.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/assets/external-script-c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/assets/external-script-d.js" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/assets/external-script-d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/simple.md" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/simple.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-auto-animate.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-auto-animate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-dependencies-async.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-dependencies-async.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-dependencies.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-dependencies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-grid-navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-grid-navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-iframe-backgrounds.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-iframe-backgrounds.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-iframes.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-iframes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-markdown.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-markdown.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-multiple-instances-es5.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-multiple-instances-es5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-multiple-instances.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-multiple-instances.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-pdf.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-pdf.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test-state.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test-state.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/reveal.js/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/reveal.js/test/test.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pL5UoTcktk4930pHFIZHCvcGPD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Current/utku_SNSF" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="knoc_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="topic_modelling" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/knoc_example" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/knoc_example/knoc_example.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.knoc_example" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b6062cc-ca84-4d8e-b022-23b8d99c9ff2" name="Default Changelist" comment="" />
+      <created>1614949550397</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614949550397</updated>
+      <workItem from="1614949552702" duration="4980000" />
+      <workItem from="1614958834079" duration="3118000" />
+      <workItem from="1614962215137" duration="6189000" />
+      <workItem from="1614979890109" duration="7109000" />
+      <workItem from="1614989047243" duration="6009000" />
+      <workItem from="1615023456230" duration="1094000" />
+      <workItem from="1615025822727" duration="124000" />
+      <workItem from="1615367577716" duration="6770000" />
+      <workItem from="1615648512407" duration="8000" />
+      <workItem from="1615669715950" duration="11000" />
+      <workItem from="1615669817374" duration="107000" />
+      <workItem from="1615851375463" duration="30000" />
+      <workItem from="1615984551473" duration="504000" />
+      <workItem from="1616068525524" duration="1251000" />
+      <workItem from="1617749446095" duration="1231000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/topic_modelling$knoc_example.coverage" NAME="knoc_example Coverage Results" MODIFIED="1614956366964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knoc_example" />
+  </component>
+</project>

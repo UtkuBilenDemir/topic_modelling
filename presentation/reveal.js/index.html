@@ -1,0 +1,730 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>reveal.js</title>
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <section  data-markdown="">
+        <textarea data-template>
+          ### NLP-Methoden? Erfahrungen mit Topic Modelling und neue Anwendungsmöglichkeiten
+          ---
+          ##### Lunchtalk 2021-03-11
+
+          ###### Utku Demir & Dietmar Lampert
+		</textarea>
+      </section>
+      <section  data-markdown="">
+        <textarea data-template>
+          #### Kurzvorstellung von Utku
+          ---
+          Nachdem pandemiebedingt wenig sozialer Austausch stattfindet, kurz über Utku:
+          * arbeitet seit Juli 2020 am ZSI im Bereich F&E
+          * KNOWMAK und bibliometrische Studien
+          * neu: SNSF – Soziale Innovation
+          * verfolgt Masterstudium in der Politikwissenschaft
+          * und Bachelor in der Mathematik
+          * Interessen am ZSI vorwiegend Data Science aber durchaus breit (Politikwissenschaft), also natürlich offen für neues
+		</textarea>
+      </section>
+      <section  data-markdown="">
+        <textarea data-template>
+          #### NLP-Methoden? Erfahrungen mit Topic Modelling und neue Anwendungsmöglichkeiten
+          ---
+          **Motivation**
+          * Projekt mit großen Datensätzen
+          * keine passenden Methoden am ZSI
+          * Experimentieren mit neuen Methoden
+          * Teilen der Erfahrung und potentielle, neue Einsatzgebiete
+		</textarea>
+      </section>
+      <section  data-markdown="">
+        <textarea data-template>
+          #### NLP-Methoden? Erfahrungen mit Topic Modelling und neue Anwendungsmöglichkeiten
+          ---
+          **Aufbau des Lunchtalks**
+          * Kurzvorstellung & Motivation (Utku u. Dietmar)
+          * Theoretischer Überblick (Dietmar)
+          * Exkursion “NLP” (Dietmar)
+          * Topic Modelling (Utku)
+          * LDA – Latent Dirichlet Allocation (Utku)
+          * Fragen und Diskussion (alle Teilnehmenden)
+		</textarea>
+      </section>
+      <section  data-markdown="">
+        <textarea data-template>
+          #### NLP-Methoden? Erfahrungen mit Topic Modelling und neue Anwendungsmöglichkeiten
+          ---
+          **Theoretischer Überblick**
+          * aller Übel Anfang: Text Mining
+          * auch bekannt als Textanalyse
+          * Grundsatzfrage: Wie kann man (unstrukturieren) Text in strukturierte Daten transformieren, sodass die Analyse leichter fällt?
+		</textarea>
+      </section>
+      <section  data-markdown="">
+        <textarea data-template>
+          #### NLP-Methoden? Erfahrungen mit Topic Modelling und neue Anwendungsmöglichkeiten
+          ---
+          **Theoretischer Überblick**
+          * Weshalb?: große Datenmengen, Datenströme
+          * Herausforderungen:
+            * unstrukturiert,
+            * unterschiedliche elektronische Formate,
+            * viele verschiedene Dimensionen,
+            * verschiedene Sprachen,
+            * Komplexe Konzepte und Nuancen
+		</textarea>
+      </section>
+      <section  data-markdown="">
+        <textarea data-template>
+          #### NLP-Methoden? Erfahrungen mit Topic Modelling und neue Anwendungsmöglichkeiten
+          ---
+          **Theoretischer Überblick**
+          * Wie?: NLP, AI, ML
+          * NLP – Natural Language Processing
+          * AI – Articficial Intelligence
+          * ML – Machine Learning
+		</textarea>
+      </section>
+      <section  data-markdown="">
+        <textarea data-template>
+          #### NLP-Methoden? Erfahrungen mit Topic Modelling und neue Anwendungsmöglichkeiten
+          ---
+          **Theoretischer Überblick**
+          ![](./diagrams/nlp.png)
+		</textarea>
+      </section>
+      <section  data-markdown="">
+        <textarea data-template>
+          #### NLP-Methoden? Erfahrungen mit Topic Modelling und neue Anwendungsmöglichkeiten
+          ---
+          **NLP**
+          ![](./diagrams/nlp2.png)
+		</textarea>
+      </section>
+    </section>
+    <section>
+        <div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="286" data-natural-height="672" src="./diagrams/0.svg" data-lazy-loaded=""></div>
+    </section>
+    <section>
+      <section  data-markdown="">
+        <textarea data-template>
+          ## 1. Topic Modelling
+		</textarea>
+        <aside class="notes">
+          Hallo, ich begrüße euch allen
+
+          und danke für die Teilnahme. Ich habe nicht erwartet, dass so viele in der home-office Phase teilnehmen.
+
+          Ich habe die Meisten glaube ich schon kennengelernt aber es gibt noch immer Mitarbeiterinnen, denen ich mich noch nicht vorgestellt habe.
+
+          Deswegen will ich mich kurz vorstellen und hoffentlich sehen wir uns bald auch persönlich.
+
+          Ich heiße Utku. Ich arbeite eigentlich seit Juli am ZSI, also ich bin eigentlich nicht mehr wirklich neu.
+
+          Ich studiere noch immer nebenbei,
+          einerseits läuft mein Masterstudium in der Politikwissenschaft und
+          andererseits studiere ich auch Bachelor Mathematik.
+
+          In diesem Sinne sind meine Interessenfelder auch ein bisschen Breit aber was ich soweit am ZSI gemacht habe sind bibliometrische Analysen, Datenanalyse; also eher auf der Data Science Seite.
+
+          Das Thema heute ist genau damit verbunden. Wegen einem bestimmten PRojekt haben wir eine neue Methode mindestens für mich kennengelernt und dabei neben den Herausforderungen auch interessante Möglichkeiten entdeckt.
+
+          Ich will schon langsam hinein gehen, diese Kompetenz war Topic Modelling
+        </aside>
+      </section>
+      <section>
+        <div class="sl-block" data-block-type="text" style="width: auto; left: auto; top: 10%; height: auto;" data-block-id="2fd1d061a866692d2c07ed5c1e1d24f6">
+          <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+            <h4 style="text-align: left;"><span style="font-size:1.0em">1.1. Was ist <em>topic modelling</em></span></h4>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="text" style="width: 60%; left: auto; top: auto; height: auto;" >
+          <div class="sl-block-content">
+            <br />
+            <ul style="font-size:0.5em; line-height:2em">
+              <li>
+                <span>Ein <em>Machine Learning</em> (ML)-Verfahren in NLP, das;</span>
+                <br />
+                  <ul>
+                    <li>eine Textsammlung (Corpus) als Input nimmt,</li>
+                    <li>Muster in Wörter oder Ausdrücke findet und</li>
+                    <li>diese als <em>Topics</em> gruppiert.</li>
+                  </ul>
+              </li>
+              <br />
+              <li style="line-height:2em">
+                <span>Jedes Dokument kann abhängig von der Methode ein einziges oder mehrere <em>Topics</em> haben. </span>
+              </li>
+              <br />
+              <li style="line-height:2em">
+                <span>Meistens <em>unsupervised</em>: Eine vorherige Beschriftung/ Klassifikation der Dokumente ist nicht nötig.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="image" style="position:absolute; width: 320px; height: auto; left: 70%; top: 0px; min-width: 1px; min-height: 1px;"  data-name="image-167690" data-block-id="a297e7a329fcbdd1ab54c47195751e07">
+          <div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="286" data-natural-height="672" src="./diagrams/11aa.svg" data-lazy-loaded=""></div>
+        </div>
+        <aside class="notes">
+          Ok, so, was ist Topic Modelling.
+
+          <br />
+          <br />
+          Grundsätzlich ist es ein Machine Learning Verfahren.
+
+          <br />
+          <br />
+          Es nimmt eine Textsammlung als Input.
+
+          <br />
+          <br />
+          und sucht bestimmte Muster in Wörter oder Ausdrücke
+
+          <br />
+          <br />
+          Die Wörter in den Texte werden in einer Art und Weise gruppiert und am Ende bekommen wir erstens was für unterschiedliche solche Wörter Gruppen in der gesamten Textsammlung gibt und welche von diesen Gruppen (oder was für eine Gruppe) werden in den einzelnen Texte vorhanden.
+
+          <br />
+          <br />
+          Also hier gibt es eine NLP-Terminologie, ich werde durchaus dieses Vortrags versuchen immer die richtige Terminologie zu benutzen. In dieser Terminologie heißt eine Textsammlung Corpus und einzelne Texte heißen ausschließlich Dokument.
+
+          <br />
+          <br />
+          Und was wir als Topic nennen, wie gemeint, anders als was wir davon normalerweise verstehen. Ich habe diese als Gruppierungen benannt aber noch präsizer sind sie meistens eine Wahrscheinlichkeitsverteilung von den Wörter. Das werden wir gleich weiterdiskutieren, wenn es nicht so viel bedeutet hat.
+
+          <br />
+          <br />
+          Also, in den unterschiedlichen Topic Modelling Methoden kann ein Dokument, ab jetzt referiere ich einzelne Texte in unserem Corpus als Dokumente, entweder ein einzelnes oder eine Verteilung von den Topics.
+
+          <br />
+          <br />
+          Topic Modelling Verfahren funktionieren meistens unsupervised, was heißt das?
+          Eine Vorarbeit die Dokumente zu klassifizieren, labeln ist nicht nötig, der Algotihmus sollte die Klassifikation selbst schaffen.
+
+          <br />
+          <br />
+          Jedoch gibt es viele Fälle, wobei so eine Vorarbeit hilfreich ist.
+        </aside>
+      </section>
+      <section>
+        <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10 " dir="ui">
+          <h4 style="text-align: left;">1.2. Latent Dirichlet Allocation (LDA)</h4>
+        </div>
+        <div class="sl-block" data-block-type="text" style="width: 60%; left: auto; top: 40%; height: auto;" data-block-id="d49d51c63440bb7cdf67c17e1010dc29">
+          <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+            <ul style="font-size:0.5em; line-height:3em">
+              <li>
+                <p><span><strong>Die</strong> <em>topic modelling</em> Methode.</span></p>
+              </li>
+              <li><span>Erst veröffentlicht bei David Blei u.a. (2003). Die ersten Anwendungen: Wiss. Abstracts zu kategorisieren.</span></li>
+              <li><span>Annahmen von LDA:</span>
+                <ul>
+                  <li><span>Jedes <em>Document</em> ist eine Sammlung von den <em>Topics.</em></span></li>
+                  <li><span>Jedes <em>Topic</em> ist eine Sammlung von den Wörtern.</span></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="image" style="position:absolute; width: 30%; height: auto; left: 75%; top: 10%" data-name="image-f84aee" data-block-id="1291de5c6eed0508070b670cc08086ee">
+          <div class="sl-block-content" style="z-index: 14;" data-inline-svg="false"><img style="" data-natural-width="332" data-natural-height="583" src="./diagrams/12a.svg" data-lazy-loaded=""></div>
+        </div>
+        <div class="sl-block" data-block-type="image" style="position:absolute; width: auto; height: 5%; left: 0; top: auto;" data-name="image-1a48b5" data-block-id="28086e9c0fea7d3f2216a2dbc2847b21">
+          <div class="sl-block-content" style="z-index: 15;"><img src="./diagrams/12b.svg" style="" data-natural-width="849" data-natural-height="147"></div>
+        </div>
+        <aside class="notes">
+
+          Jetzt kommen wir gleich zu unserer topic modelling Methode Latent Dirichlet Allocation.
+
+          <br />
+          <br />
+          LDA ist schon seit vom Anfang der Topic Modelling Geschichte als die Topic Modelling Methode geblieben. Es ist so populär, dass viele Menschen eigentlich LDA meinen, wenn sie über TOpic Modelling sprechen.
+
+          <br />
+          <br />
+          Die erste Publikation von LDA ist schon in 2003 von dem Informatiker David Blei publiziert. Er ist schon berühmt in diesen Bereiche. Wenn wir z.B. weitere Publikationen von David Blei beachten, er versucht auch mit seinem Team zu bestimmten ob die LDA-Methode von einem Korpus der beliebigen Abstracts wissenschaftliche Gebiete richtig gruppieren kann. Das ist nicht wirklich weit weg von unserem Use-Case, ein Beispiel davon werden wir sehen.
+
+          <br />
+          <br />
+          Zuerst aber will ich erwähnen, was LDA-Verfahren meint mit einem Document und Topic.
+
+          <br />
+          <br />
+          Wie wir auf der rechten Seite sehen, ist die Annahme von LDA, dass jedes Dokument eine Mischung von unterschiedlichen Topics beinhaltet. Manche sind dominanter als die anderen.
+
+          <br />
+          <br />
+          Jedes Dokument kann eine unterschiedichle Anzahl der Topics haben und prinzipiell, wie auf dem dritten Dokument steht, kann ein Dokument auch ein einzelnes Topic haben aber das ist eher unwahrscheinlich. Meistens ist das Gewicht von einem Topic höchstens 90% in einem Dokument.
+
+          <br />
+          <br />
+          Ansonsten ist ein Topic wieder eine Verteilung von den Wörter. Wenn ein Wort öfter in einem TOpic erscheint wird das Gewicht von diesem Wort in dem Topic höher. Das bedeutet wird LDA-Algorithmus annehmen, wenn dieses hoch gewichtete Wort in einem Dokument vorkommt hat dieses Dokument mehr Wahrscheinlichkeit dem Topic zu gehören.
+
+          <br />
+          <br />
+          Aber wie werden diese Verteilungen bestimmen, dafür schauen wir kurz auf die innere Struktur von LDA.
+        </aside>
+      </section>
+      <section>
+        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 140px; height: auto;" data-block-id="4cde6aff86cd61141305701f6c0e80e4">
+          <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+            <h4>
+              <span style="font-size:1.0em">1.3. </span>Wie funktioniert LDA</h4>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="text" style="width: 60%; left: auto; top: auto; height: auto;" data-block-id="b21adb97f4a6d1b5117376a2183321d8">
+          <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+            <br />
+            <ul style="font-size:0.5em; line-height:2em" >
+              <li  class="fragment" data-fragment-index="0">
+                <span style="line-height:1.5em">Am Anfang werden alle Wörter zu den <em>Topics</em> beliebig zugeordnet (Die Anzahl der Topics <code>K</code> geben wir selbst ein). </span>
+              </li>
+              <br />
+              <li class="fragment" data-fragment-index="1">
+                <span style="line-height:1.5em">Der Algorithmus geht mit bei jeder Iteration jedes Wort und jedes zugeordnete Topic durch, und kontrolliert: </span>
+                <ul>
+                  <li>
+                    <span>Wie oft das Topic in jedem Dokument vorkommt (1).</span>
+                  </li>
+                  <li>
+                    <span >Wie oft ein Wort in einem Topic aufscheint (2). </span>
+                  </li>
+                </ul>
+              </li>
+
+              <br />
+              <li  class="fragment" data-fragment-index="2"><span style="line-height:1.5em">Tritt ein Wort nicht häufig in den zugeordneten Dokumenten auf  &#8658; es gehört zu einem anderen Topic</span>.</li>
+
+              <br />
+              <li class="fragment" data-fragment-index="2"><span style="line-height:1.5em">Treten die Wörter des zugeordneten Topics nicht so oft im Dokument auf &#8658; das Dokument gehört zu einem anderen Topic.</span></li>
+            </ul>
+          </div>
+          <div class="sl-block" data-block-type="image" style="position:absolute; width: auto; height: auto; left: 69.2%; top: 10%; min-width: 1px; min-height: 1px;" data-name="image-f84aee" data-block-id="1291de5c6eed0508070b670cc08086ee">
+            <div class="sl-block-content" style="z-index: 14;" data-inline-svg="false"><img class="sl-block-content fragment" style="" data-natural-width="332" data-natural-height="583" src="./diagrams/13a.svg" data-lazy-loaded=""  data-fragment-index="0"></div>
+          </div>
+          <div class="sl-block" data-block-type="image" style="position:absolute; width: 53%; height: auto; left: 69.05%; top: 40%; min-width: 1px; min-height: 1px;" data-name="image-f84aee" data-block-id="1291de5c6eed0508070b670cc08086ee">
+            <div class="sl-block-content" style="z-index: 14;" data-inline-svg="false"><img class="sl-block-content fragment" style="" data-natural-width="332" data-natural-height="583" src="./diagrams/13b.svg" data-lazy-loaded=""  data-fragment-index="1"></div>
+          </div>
+          <div class="sl-block" data-block-type="image" style="position:absolute; width: auto; height: auto; left: 70%; top: 70%; min-width: 1px; min-height: 1px;" data-name="image-f84aee" data-block-id="1291de5c6eed0508070b670cc08086ee">
+            <div class="sl-block-content" style="z-index: 14;" data-inline-svg="false"><img class="sl-block-content fragment" style="" data-natural-width="332" data-natural-height="583" src="./diagrams/13c.svg" data-lazy-loaded=""  data-fragment-index="2"></div>
+          </div>
+        </div>
+          <aside class="notes">
+
+Ich muss vor allem sagen, dass wir die Anzahl der Topics selbst eingeben müssen
+Also, wir müssen leider schätzen wie viele Topics wir in dem Korpus erwarten.
+Das ist natürlich eine problematische Eigenschaft und es gibt schon ein bisschen Kritik deswegen aber auch einige Workarounds sozusagen.
+Ich werde später zu diesem Thema zurückkommen
+            <br />
+            <br />
+
+Also am Anfang wir der LDA-Algorithmus jedes Wort zu einem beliebigen Topic zuordnen.
+Z.B. wie auf dem Bespiel hier, sagen wir, wir haben einen Korpus und viele Dokumente drinnen und in einem von den DOkumenten steht das Wort "dog".
+Hier ist es angenommen, dass wir die Anzahl der Topics 2 ausgewählt, also wir haben Topic_A und Topic_B. Hier ist "dog" zu dem Topic_B beliebig zugeordnet.
+
+            <br />
+Dann fängt ein Prozess an:
+
+            <br />
+Der Algorithmus geht jedes Wort und dem zugeordneten Topic durch
+
+            <br />
+und schaut erstens, wie oft das gesamte Topic wirklich in den assoziierten Dokumente auftritt. Also, sind die anderen Wörter von diesem Topic in dem zugeordneten Dokumenten vorhanden oder nicht.
+
+            <br />
+und zweitens, wie oft eigentlich das Wort in dem Topic erscheint.
+
+            <br />
+Wenn das Wort von einem Topic nicht wirklich in den zugeordneten Dokumenten auftritt gehört das zu einem anderen Topic.
+
+            <br />
+Wenn die Wörter des zugeordneten Topics nicht so oft in einem von den Dokumenten erscheint, dann gehört wahrscheinlich das Dokument zu einem anderen Topic.
+
+            <br />
+Dieser Zyklus wird wiederholt und wir können auswählen wie vieles mal der Prozess durchgeführt wird und wenn das Modell einmal konvergiert machen die weiteren Zyklen keinen Unterschied mehr. Also, deswegen ist es immer eine gute Idee die Anzahl der Zyklen hoch auszuwählen aber man verliert auch ein bisschen Zeit, wenn diese Anzahl zu hoch gestellt wird.
+          </aside>
+      </section>
+    </section>
+    <section>
+      <section data-markdown="">
+        <textarea data-template>
+          ## 2. Anwendungsbeispiel
+		</textarea>
+      </section>
+      <section>
+        <div class="sl-block" data-block-type="text" style="position:absolute; width: 384px; left: 48px; top: 210px; height: auto;" data-block-id="cbe905200b9ba29544f606a1795bccfa">
+          <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+            <h7>Aufgabe:</h7>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="text" style="position:absolute; width: 40%; left: 48px; top: 280px; height: auto;" data-block-id="07a44f0adff314c34b06ce281612f057">
+          <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 11;">
+            <ul style="font-size:0.5em; line-height:2.5em">
+              <li>
+                <span>Die Publikationen über China aus innerhalb der letzten 10 Jahre analysieren.</span>
+              </li>
+              <li>
+                <span>Aus unterschiedlichen wiss. Gebieten <strong>relevante </strong>Publikationen identifizieren.</span>
+              </li>
+              <li>
+                <span>Die relevanten Publikationen thematisch zu klassifizieren.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="text" style="position:absolute; width: 384px; left: 528px; top: 210px; height: auto;" data-block-id="e3047e53decab801136d36c887dfb642">
+          <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 12;">
+            <h7>Herausforderungen:</h7>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="text" style="position:absolute; width: 40%; left: 528px; top: 280px; height: auto;" data-block-id="6466326a2efca0de9b1eff25a98f65ef">
+          <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 13;">
+            <ul style="font-size:0.5em; line-height:2.5em">
+              <li>
+                <span>Breite Definition der Relevanz. </span>
+              </li>
+              <li>
+                <span>Einschätzung des Aufwands.</span>
+              </li>
+              <li>
+                <span>Wenig Erfahrung mit den Methoden.</span>
+              </li>
+              <li>
+                <span>Die enorme Anzahl der unterschiedlichen wiss. Gebiete.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="text" style="position:absolute; width: 806px; left: auto; top: 50%; height: auto;" data-block-id="762b0909c9e4cf37fcb13dae01802d45" data-name="text-358a87">
+          <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 14;" dir="ui">
+            <h4><span style="font-size:1.0em">2.1. </span>Knowledge Network on China (KNoC):</h4>
+          </div>
+        </div>
+        <aside class="notes">
+          Wir haben das topic modelling erst in KNoC-Projekt angewendet. Die Beschreibung von dem Projekt ist relativ klar, die Aufgabe ist Knowledge on China zu verbreiten. Was in unserem kleinen Teil aber die Aufgabe war die Publikationen über China in einem Zeitraum von 10 Jahren zu analysieren und erstens deren Relevanz zu bestimmen und zweitens dadurch akademische Experte von den relevanten Themen zu bestimmen.
+          <br />
+          <br />
+Die Relevanz in dem Sinne war ein breiter Begriff aber generell gab es so eine HErleitung von dem Europäischen Kommission. Z.B. sagen wir in den technischen Bereiten haben wir die BEreiche, wobei es Aktivität bzgl. Künstliche Intelligenz gibt, sie wollten die Publikationen relevant bestimmen wobei es um die neuen Anwendungen vom KI geht aber nicht die Publikationen wobei die Theorie von diesen Methoden gesprochen werden oder z.B. von den SSH Bereichen wollten sie natürlich die Publikationen über die neue Ideologie der komm. Partei hören aber nicht eine Publikation über Maos Theorie usw. sehen.
+
+          <br />
+          <br />
+Also, eine feinere Granulation als die wiss. Gebieten war auf jeden Fall nötig und in vielen Bereichen mussten wir sogar tiefer gehen, weil es nicht wirklich immer klar war was relevant gezählt werden könnte.
+
+          <br />
+          <br />
+Natürlich haben wir Schwierigkeiten gehabt, weil die Methode so neu war.
+Der Aufwand war unterschätzt, besonders, wenn wir viele wiss. Gebiete einzeln analysieren müssten.
+
+          <br />
+          <br />
+Da es wenig Erfahrung gab mussten die Modelle of neugebaut werden.
+
+          <br />
+          <br />
+Das Spektrum von den wss. Gebieten war auch ziemlich hoch und deswegen ist die Herausforderung ziemlich groß und die Ergebnisse waren nicht perfekt.
+        </aside>
+      </section>
+      <section>
+        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 140px; height: auto;" data-block-id="8acb288e35c3ce47ec99244e7baab4ba">
+          <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+            <h4><span style="font-size:1.0em">2.2. Beispiel Datensatz</span></h4>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="text" style="position:absolute; width: 50%; left: 80px; top: 280px; height: auto;" data-block-id="9b50cabfaf16543127377266ed905983">
+          <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+            <ul style="font-size:0.5em; line-height:2.5em">
+              <li>
+                <span>Publikationen über China zwischen 2011-2020</span>
+              </li>
+              <li>
+                <span>Dokumentstruktur = Abstract + Title + Keywords</span>
+              </li>
+              <li>
+                <span>Anzahl der Dokumente = 5650</span>
+              </li>
+              <li>
+                <span>Anzahl der wiss. Gebieten = 31</span>
+              </li>
+              <li>
+                <span>Durchschnittliche Anzahl der Wörter = ~1300</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="image" style="position:absolute; width: 295.441px; height: 707px; left: 664.559px; top: 0px;" data-name="image-6e9c70" data-block-id="1c952e11cf98659228a10beb2e3b1133">
+          <div class="sl-block-content" style="z-index: 12;"><img src="./diagrams/22.svg" style="" data-natural-width="402" data-natural-height="962"></div>
+        </div>
+        <aside class="notes">
+          Jetzt haben wir hier einen Beispiel Datensatz, ich habe genau von dem Knoc Datensatz bestimmte wiss. Gebiete ausgeschlossen und mit den 31 Bereichen auf der rechten Seite einen kleineren Datensatz generiert.
+          <br />
+          <br />
+
+Die Schriftart sieht ein bisschen zu klein aus aber hoffentlich wie ihr sieht sind viele von denen von den SSH Bereichen. Warum ist es so?
+
+          <br />
+          <br />
+Die Idee dahinten ist, dass wir besonders in eiem kleineren DAtensatz den thematischen Unterschied zwischen den Naturwisssenschaften und SSH-Bereiche leicht sehen könnten. Aber noch schwerer ist es ähnlichere Bereiche thematisch klassifizeren zu können.
+Deswegen sind viele von denen nah zueinander aber es gibt auch manche, die relativ ferner bleiben z.B. Ecology gibt es, Environmental Studies usw., schauen wir, ob wir die Distanz zu diesen Bereiche auch identifizieren können.
+
+          <br />
+          <br />
+Was haben wir unserem Datensatz noch?
+
+          <br />
+          <br />
+Also die Dokumente in unserem Korpus sind so gestaltet Abstract + Überschrift und Keywoords. Warum so? Manche wichtige Begriffe werden in den Keywords z.B. wiederholt und dadurch werden die wichtigsten Begriffe auch verstärkt.
+
+          <br />
+          <br />
+Wir haben hier 5650 Publikationen, der Originale Datensatz hat knapp 33000 gehabt.
+31 Bereiche gibt es und die durchschnittliche Anzahl der Wörter in jedem Dokument ist 1300.
+        </aside>
+      </section>
+      <section>
+        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: auto; height: auto;" data-block-id="976a759fc5e5e566c810f0be26332107">
+          <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+            <h4>2.3. Bag of words, Pre-Processing</h4>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="text" style="width: 560px; left: 80px; top: 400px; height: auto; " data-block-id="c232ed88674ace4b9bdec5b6d87b61e0">
+          <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+            <br />
+            <ul style="font-size:0.5em; line-height:2.5em">
+              <li style="text-align:left"><span>
+                <span style="color: #96C0D5"><em>Tokenization</em></span></span>, <span style="color: #DA4E52"><em>stop word</em></span> Elimination, <span style="color:#6bad84"><em>Lemmatization/ Stemming</em></span>, <span style="color:#B36300"><em>n-grams</em></span>.</span></li>
+              <li style="text-align:left"><span>Document-term matrix:</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="image" style="position:absolute; width: auto; height: auto; left: 60%; top:20%" >
+          <div class="sl-block-content" style="z-index: 12;"><img src="./diagrams/23.svg" alt=""></div>
+        </div>
+
+        <div class="sl-block" data-block-type="image" style="position:absolute; width: 55%; height: auto; left: 0px; top: 300px" data-name="image-1277a1" data-block-id="1b09f593af44475e4a64fc4bb24633e4">
+          <div class="sl-block-content" style="z-index: 13;"><img src="./diagrams/23b.svg" style="" data-natural-width="722" data-natural-height="216"></div>
+        </div>
+        <aside class="notes">
+          Hier muss ich über eine Eigenschaft sprechen. LDA beachtet die Ordnung der Wörter in einem Dokument nicht. Der Algorithmus sieht nur die vorhandenen Wörter und ihre Häufigkeiten. Alles andere wie die Struktur vom Text, welche Sätze oder Wörter kommen vor oder nach, weiters ways eigentlich ein Satz ist bedeutet nichts für das LDA-Verfahren. Wir müssen den Algorithmus nur mit einer Liste der vorhandenen Wörter füttern. Dieser Konzept heißt bag-of-words.
+          <br />
+          <br />
+
+Wie auch immer es gibt in dem NLP-BEreich viele pre-processing Prozesse, die dieses bag-of-words bedeutender machen und sie sind ziemlich wichtig für LDA. Ich fasse sie hier kurz zusammen.
+
+          <br />
+          <br />
+Also Tokenization ist nichts anderes die einzelnen Wörter zu trennen und den Text in eine Liste umzuwandeln.
+
+          <br />
+          <br />
+Stop words sind die Wörter in einer Sprache, die der Bedeutung nicht wirklich viel beeinflussen, besonders wenn wir auf die einzelnen Wörter schauen. Präpositionen könnten hier ein Beispiel sein, es gibt unterschiedliche Stop words listen, ich habe an einem Punkt eine akademische Stop-word Liste auf Internet gefunden und seitdem erweitere ich die Liste von dem Keywords, jedes Mal wenn ich derartige neue Wörter finde. Hier sind die roten Wörter, die in meiner stop-word Liste vorhanden waren und wie zu sehen ins werden sie entfernt.
+
+          <br />
+          <br />
+Lemmatization ist ein Verfahren, das die Wörter in ihre Grundförme bringt. Stemming ist auch was ähnliches, es gibt kleine Unterschiede zwischen zwei Begriffe und wie zu sehen sind wird COMMITED commit, TROUBLED trouble usw.
+
+          <br />
+          <br />
+Und zuletzt n-grams konzept ist Grundsätzlich eine Methode of zusammen erscheinende Wörter gemeinsam beizubehalten. In diesem Sinne gibt es bigrams Prozess Wörterpärchen zu finden aber es gibt auch trigrams usw.
+Hier wurden bigrams und trigrams angewendet, man findet natürlich selten trigrams aber z.b. hier east_asia ein bigram beispiel geworden.
+
+          <br />
+          <br />
+Schlussendlich, was wir dem Algorithmus geben ist eine sogenannte Document-term Matrix
+
+          <br />
+          <br />
+Die Spalten hier sind die Wörter, die überhaupt in dem Korpus vorhanden sind, das wird Vocabulary benannt und die Zeilen sind die einzelnen Dokumente. In den Zellen sehen wir wie oft jedes in dem Dokument beobachtet sind.
+        </aside>
+      </section>
+      <section >
+        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 470px; height: auto;" data-block-id="89fa638ff448307b19041561ab4e4c1b">
+          <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+            <h4 style="text-align:left"><span style="font-size:1.0em">2.4. LDA Modell | Parametern</span></h4>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="text" style="position:absolute; width: 50%; left: 0; top: 20%; height: auto;" data-block-id="2ec3660909b9909c8d487e7cb2fcce47">
+          <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+            <ul style="font-size:0.5em; line-height:2.5em">
+              <li>
+                <span>Ausgrenzung der <em>most-common </em>Wörter = <em>0.25</em></span>
+              </li>
+              <li>
+                <span><em>Number of topics (K) = 22</em></span>
+              </li>
+              <li>
+                <span><em>Iterations</em> = 1000; Mehrere Iterationen ergeben bessere Resultate, jedoch macht es das Verfahren auch Zeitaufwendig.</span>
+              </li>
+              <li>
+                <span>Andere Parametern:&nbsp; Alpha, Beta.</span>
+              </li>
+              <li>
+                <span><em>Coherence Estimation</em>, die Konsistenz der Unterscheidung von den Themen zu berechnen:</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="image" style="min-width: 500px; height: 50%; min-height:500px; left: 480px; top: auto;" data-name="image-cf22bf" data-block-id="1be41ea623b2ae2368a1e8fe3715a701">
+          <div class="fig-container"
+               data-file="./visualizations/presentation_reveal.js_visualizations_coherence.html"
+               data-style="position:absolute; width: 70%; height: 80%; left: 50%; top: 20%;"
+          ></div>
+        </div>
+      </section>
+      <section >
+        <div class="sl-block"  data-block-type="text" data-block-id="89fa638ff448307b19041561ab4e4c1b">
+          <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+            <h4 style="text-align:left"><span style="font-size:1.0em">2.5. LDA Modell | Ergebnis</span></h4>
+          </div>
+        </div>
+        <div class="fig-container"
+             data-file="./visualizations/test10_newlemma.html"></div>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h4><span style="font-size:1.0em">Andere LDA-Varianten</span></h4>
+        <ul style="font-size:0.5em; line-height:2.5em">
+          <li>
+            <span>Structural Topic Modelling:</span>
+
+            <ul>
+              <li>
+                <span >R-Library.</span>
+              </li>
+              <li>
+                <span >Beachtet auch <em>metadata </em>(z.B. Publikationsjahr, -ort usw.)</span>
+              </li>
+              <li>
+                <span>Entwickelt von einem Politikwissenschaftler.</span>
+              </li>
+              <li>
+                <span>Automatisches <em>pre-processing</em>.</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>stLDA-C:</span>
+
+            <ul>
+              <li>
+                <span>Für kürzere Dokumente (z.B. Tweets)</span>
+              </li>
+              <li>
+                <span>Ein Topik für ein Dokument.</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section data-markdown="">
+        <textarea data-template>
+          ## 3. Kritische Punkte
+		</textarea>
+        <div>
+        <aside class="notes">
+
+Schlussendlich will ich über einige kritische Themen über LDA und topic modelling sprechen aber bevor wir darein gehen will ich kurz 2 andere Varianten von LDA erwähnen.
+        </aside>
+        </div>
+      </section>
+      <section >
+            <h4 ><span style="font-size:1.0em">3.1. Einschränkungen</span></h4>
+            <ul style="font-size:0.5em; line-height:2.5em">
+              <li>
+                <span>Ohne Wissen über den Kontext ist die Anwendung problematisch.</span>
+              </li>
+              <li>
+                <span><em>False positives </em>sind sehr einfach zu produzieren.</span>
+              </li>
+              <li><span>Kann die Anzahl der Topics nicht bestimmen. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></li>
+              <li><span>Beachtet die Ordnung der Wörter nicht (<em>Bag of words</em>).</span></li>
+              <li><span>Länge der Dokumenten spielt eine wichtige Rolle.</span></li>
+              <li><span>Keine Alternative zu der menschlichen Interpretation.</span></li>
+            </ul>
+        </section>
+        <section>
+            <h4><span style="font-size:1.0em">3.2. Kritik</span></h4>
+            <ul style="font-size:0.5em; line-height:2.5em">
+              <li>
+                <p><span>Hängt zu viel von dem pre-processing ab.</span></p>
+              </li>
+              <li>
+                <p><span>Die Modelle sind sensitiv gegenüber den Input-Daten.</span></p>
+              </li>
+              <li>
+                <p><span>Es nicht einfach zu bestimmen, ob wir wirklich messen, was wir messen wollten.</span></p>
+              </li>
+              <li>
+                <p><span>Was ist ein Topic?</span></p>
+              </li>
+            </ul>
+      </section>
+      <section>
+            <h4>3.3. Bedeutung für die Sozialwissenschaften</h4>
+            <ul style="font-size:0.5em; line-height:2.5em">
+              <li class="fragment" data-fragment-index="0">Ein Expert-Tool</li>
+              <li class="fragment" data-fragment-index="0">Schwierigere Fragestellungen/ Herausforderungen</li>
+            </ul>
+        <div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 80px; top: 490px;" data-name="line-4561e8" data-block-id="0de138b1533eac03a08cb5717dc1748d">
+          <div class="sl-block-content fragment" data-line-x1="0" data-line-y1="7" data-line-x2="806" data-line-y2="0" data-line-color="#000000" data-line-start-type="none" data-line-end-type="none" style="z-index: 13;" data-fragment-index="1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="806" height="7" viewBox="0 0 806 7">
+            <line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="7" x2="806" y2="0"></line>
+            <line class="line-element" stroke="#000000" stroke-width="2" x1="0" y1="7" x2="806" y2="0"></line>
+          </svg></div>
+        </div>
+          <div class="sl-block-content fragment"  style="position:absolute; width: auto; left: 50%; top: auto; height: auto;" data-placeholder-tag="p" data-placeholder-text="Text"  data-fragment-index="1">
+            <p>Anwendungsmöglichkeiten?</p>
+          </div>
+          <div class="sl-block-content fragment" style="position:absolute; width: auto; left: 0; top: auto; height: auto;"  data-fragment-index="1">
+            <p>Beobachtungen?</p>
+          </div>
+      </section>
+    </section>
+  </div>
+</div>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+        center:true,
+        history:true,
+        transition:'none',
+        transitionSpeed:'fast',
+        height:"80%",
+        defaultTiming: 120,
+        marginheight:100,
+        minScale: 1,
+	    maxScale: 2,
+
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealFullscreen],
+        dependencies: [
+            // ...
+            {src: 'node_modules/reveald3/reveald3.js'},
+            // ...
+        ]
+    });
+    console.log('Current directory: ' + process.cwd());
+</script>
+</body>
+</html>

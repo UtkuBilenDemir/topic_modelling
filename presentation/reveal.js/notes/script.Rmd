@@ -1,0 +1,228 @@
+---
+title: ""
+author: ""
+date: ""
+output: pdf_document
+---
+
+## 0. Vorstellung
+
+Vielen Dank für die Einführung.
+
+Ich begrüße euch alle und vor allem vielen Dank für die Teilnahme, ich habe nicht erwartet, dass so viele in dieser Phase teilnehmen würden. Das Thema ist ein bisschen niche und viele kennen mich auch nicht wirklich.
+
+Ich habe glaube ich schon die Meisten kennengelernt aber es gibt noch Mitarbeiterinnen, denen ich mich nicht vorgestellt habe. WEnn die Zeiten besser wird, werde ich das noch nachholen.
+Also nur kurz über mich. Ich arbeite schon seit Juli am ZSI, eigentlich doch nicht so neu
+
+Ich war soweit am ZSI meistens bei den bibliometrischen Studien und generell mit der DAtenanalyse beschäftigt.
+
+Ich bin auch aktiv beim KNOWMAK, ansonsten kommt jetzt ein neues Projekt, wobei wir in den Projekten von SNSF Soziale Innovation Aspekt analysieren werden.
+
+Ansonsten studiere ich nebenbei. Ich studiere gerade master Politikwissenschaft und Bachelor Mathematik
+
+Wenn man diese Kombination erwähnt klingt es wie, dass meine Interessenfelder eher auf der Data Science seite liegt aber eigentlich bin bei der Politikwissenschaft mehr mit der politischen Theorie beschäftigt. Die Interessenfelder kann ich aber bei unserer Diskussionsrunde erwähnen, ich gebe jetzt das Wort zurück zum Dietmar.
+
+## überblick
+
+Ich habe hier einen Überblick gehabt aber es ist glaube ich soweit klar geworden. Ich spreche zuerst über bestimte Definitionen dann haben wir ein kleines BEispiel und dann erwähne ich einige kritische Punkte über diese Methoden. Ich springe am Besten gleich rein.
+
+
+## 1. 
+
+Das Thema heute ist genau mit  unseren Erfahrungen verbunden. Wegen einem bestimmten PRojekt haben wir eine neue Methode mindestens für mich kennengelernt und dabei neben den Herausforderungen auch interessante Möglichkeiten entdeckt.
+
+Ich will schon langsam hinein gehen, diese Kompetenz war Topic Modelling
+
+
+### 1.1 Was ist Topic Modelling
+
+Ok, so, was ist Topic Modelling.
+
+Grundsätzlich ist es ein Machine Learning Verfahren.
+
+Es nimmt eine Textsammlung als Input.
+
+und sucht bestimmte Muster in Wörter oder Ausdrücke
+
+Die Wörter in den Texte werden in einer Art und Weise gruppiert und am Ende bekommen wir erstens was für unterschiedliche solche Wörter Gruppen in der gesamten Textsammlung gibt und welche von diesen Gruppen (oder was für eine Gruppe) werden in den einzelnen Texte vorhanden. 
+
+Also hier gibt es eine NLP-Terminologie, ich werde durchaus dieses Vortrags versuchen immer die richtige Terminologie zu benutzen. In dieser Terminologie heißt eine Textsammlung Corpus und einzelne Texte heißen ausschließlich Dokument. 
+
+Und was wir als Topic nennen, wie gemeint, anders als was wir davon normalerweise verstehen. Ich habe diese als Gruppierungen benannt aber noch präsizer sind sie meistens eine Wahrscheinlichkeitsverteilung von den Wörter. Das werden wir gleich weiterdiskutieren, wenn es nicht so viel bedeutet hat. 
+
+Also, in den unterschiedlichen Topic Modelling Methoden kann ein Dokument, ab jetzt referiere ich einzelne Texte in unserem Corpus als Dokumente, entweder ein einzelnes oder eine Verteilung von den Topics.
+
+Topic Modelling Verfahren funktionieren meistens unsupervised, was heißt das?
+Eine Vorarbeit die Dokumente zu klassifizieren, labeln ist nicht nötig, der Algotihmus sollte die Klassifikation selbst schaffen.
+
+Jedoch gibt es viele Fälle, wobei so eine Vorarbeit hilfreich ist.
+
+### 1.2. Latent Dirichlet Allocation
+
+Jetzt kommen wir gleich zu unserer topic modelling Methode Latent Dirichlet Allocation.
+
+LDA ist schon seit vom Anfang der Topic Modelling Geschichte als die Topic Modelling Methode geblieben. Es ist so populär, dass viele Menschen eigentlich LDA meinen, wenn sie über TOpic Modelling sprechen. 
+
+Die erste Publikation von LDA ist schon in 2003 von dem Informatiker David Blei publiziert. Er ist schon berühmt in diesen Bereiche. Wenn wir z.B. weitere Publikationen von David Blei beachten, er versucht auch mit seinem Team zu bestimmten ob die LDA-Methode von einem Korpus der beliebigen Abstracts wissenschaftliche Gebiete richtig gruppieren kann. Das ist nicht wirklich weit weg von unserem Use-Case, ein Beispiel davon werden wir sehen.
+
+Zuerst aber will ich erwähnen, was LDA-Verfahren meint mit einem Document und Topic. 
+
+Wie wir auf der rechten Seite sehen, ist die Annahme von LDA, dass jedes Dokument eine Mischung von unterschiedlichen Topics beinhaltet. Manche sind dominanter als die anderen. 
+
+Jedes Dokument kann eine unterschiedichle Anzahl der Topics haben und prinzipiell, wie auf dem dritten Dokument steht, kann ein Dokument auch ein einzelnes Topic haben aber das ist eher unwahrscheinlich. Meistens ist das Gewicht von einem Topic höchstens 90% in einem Dokument. 
+
+Ansonsten ist ein Topic wieder eine Verteilung von den Wörter. Wenn ein Wort öfter in einem TOpic erscheint wird das Gewicht von diesem Wort in dem Topic höher. Das bedeutet wird LDA-Algorithmus annehmen, wenn dieses hoch gewichtete Wort in einem Dokument vorkommt hat dieses Dokument mehr Wahrscheinlichkeit dem Topic zu gehören.
+
+Aber wie werden diese Verteilungen bestimmen, dafür schauen wir kurz auf die innere Struktur von LDA.
+
+### 1.3. Wie funktioniert LDA
+
+Ich muss vor allem sagen, dass wir die Anzahl der Topics selbst eingeben müssen
+Also, wir müssen leider schätzen wie viele Topics wir in dem Korpus erwarten.
+Das ist natürlich eine problematische Eigenschaft und es gibt schon ein bisschen Kritik deswegen aber auch einige Workarounds sozusagen. 
+Ich werde später zu diesem Thema zurückkommen.
+
+Also am Anfang wir der LDA-Algorithmus jedes Wort zu einem beliebigen Topic zuordnen.
+Z.B. wie auf dem Bespiel hier, sagen wir, wir haben einen Korpus und viele Dokumente drinnen und in einem von den DOkumenten steht das Wort "dog". 
+Hier ist es angenommen, dass wir die Anzahl der Topics 2 ausgewählt, also wir haben Topic_A und Topic_B. Hier ist "dog" zu dem Topic_B beliebig zugeordnet.
+
+Dann fängt ein Prozess an:
+
+Der Algorithmus geht jedes Wort und dem zugeordneten Topic durch
+
+und schaut erstens, wie oft das gesamte Topic wirklich in den assoziierten Dokumente auftritt. Also, sind die anderen Wörter von diesem Topic in dem zugeordneten Dokumenten vorhanden oder nicht.
+
+und zweitens, wie oft eigentlich das Wort in dem Topic erscheint. 
+
+Wenn das Wort von einem Topic nicht wirklich in den zugeordneten Dokumenten auftritt gehört das zu einem anderen Topic.
+
+Wenn die Wörter des zugeordneten Topics nicht so oft in einem von den Dokumenten erscheint, dann gehört wahrscheinlich das Dokument zu einem anderen Topic. 
+
+Dieser Zyklus wird wiederholt und wir können auswählen wie vieles mal der Prozess durchgeführt wird und wenn das Modell einmal konvergiert machen die weiteren Zyklen keinen Unterschied mehr. Also, deswegen ist es immer eine gute Idee die Anzahl der Zyklen hoch auszuwählen aber man verliert auch ein bisschen Zeit, wenn diese Anzahl zu hoch gestellt wird. 
+
+
+## 2.ANWENDUNGSBEISPIEL
+
+Wir haben jetzt ein Anwendungsbeispiel. Ich will kurz über das Projekt sprechen,
+wo wir topic modelling anwenden mussten und danach zeige ich den Verlauf mit einem kleinen Beispiel.
+
+### 2.1. KNoC
+
+Wir haben das topic modelling erst in KNoC-Projekt angewendet. Die Beschreibung von dem Projekt ist relativ klar, die Aufgabe ist Knowledge on China zu verbreiten. Was in unserem kleinen Teil aber die Aufgabe war die Publikationen über China in einem Zeitraum von 10 Jahren zu analysieren und erstens deren Relevanz zu bestimmen und zweitens dadurch akademische Experte von den relevanten Themen zu bestimmen. 
+
+Die Relevanz in dem Sinne war ein breiter Begriff aber generell gab es so eine HErleitung von dem Europäischen Kommission. Z.B. sagen wir in den technischen Bereiten haben wir die BEreiche, wobei es Aktivität bzgl. Künstliche Intelligenz gibt, sie wollten die Publikationen relevant bestimmen wobei es um die neuen Anwendungen vom KI geht aber nicht die Publikationen wobei die Theorie von diesen Methoden gesprochen werden oder z.B. von den SSH Bereichen wollten sie natürlich die Publikationen über die neue Ideologie der komm. Partei hören aber nicht eine Publikation über Maos Theorie usw. sehen.
+
+Also, eine feinere Granulation als die wiss. Gebieten war auf jeden Fall nötig und in vielen Bereichen mussten wir sogar tiefer gehen, weil es nicht wirklich immer klar war was relevant gezählt werden könnte.
+
+Natürlich haben wir Schwierigkeiten gehabt, weil die Methode so neu war.
+Der Aufwand war unterschätzt, besonders, wenn wir viele wiss. Gebiete einzeln analysieren müssten. 
+
+Da es wenig Erfahrung gab mussten die Modelle of neugebaut werden.
+
+Das Spektrum von den wss. Gebieten war auch ziemlich hoch und deswegen ist die Herausforderung ziemlich groß und die Ergebnisse waren nicht perfekt.k
+
+### 2.2. Beispiel Datensatz
+
+Jetzt haben wir hier einen Beispiel Datensatz, ich habe genau von dem Knoc Datensatz bestimmte wiss. Gebiete ausgeschlossen und mit den 31 Bereichen auf der rechten Seite einen kleineren Datensatz generiert. 
+
+Die Schriftart sieht ein bisschen zu klein aus aber hoffentlich wie ihr sieht sind viele von denen von den SSH Bereichen. Warum ist es so? 
+
+Die Idee dahinten ist, dass wir besonders in eiem kleineren DAtensatz den thematischen Unterschied zwischen den Naturwisssenschaften und SSH-Bereiche leicht sehen könnten. Aber noch schwerer ist es ähnlichere Bereiche thematisch klassifizeren zu können.
+Deswegen sind viele von denen nah zueinander aber es gibt auch manche, die relativ ferner bleiben z.B. Ecology gibt es, Environmental Studies usw., schauen wir, ob wir die Distanz zu diesen Bereiche auch identifizieren können.
+
+Was haben wir unserem Datensatz noch? 
+
+Also die Dokumente in unserem Korpus sind so gestaltet Abstract + Überschrift und Keywoords. Warum so? Manche wichtige Begriffe werden in den Keywords z.B. wiederholt und dadurch werden die wichtigsten Begriffe auch verstärkt. 
+
+Wir haben hier 5650 Publikationen, der Originale Datensatz hat knapp 33000 gehabt. 
+31 Bereiche gibt es und die durchschnittliche Anzahl der Wörter in jedem Dokument ist 1300.
+
+
+### 2.3. Bag of words, Pre-processing
+
+Hier muss ich über eine Eigenschaft sprechen. LDA beachtet die Ordnung der Wörter in einem Dokument nicht. Der Algorithmus sieht nur die vorhandenen Wörter und ihre Häufigkeiten. Alles andere wie die Struktur vom Text, welche Sätze oder Wörter kommen vor oder nach, weiters ways eigentlich ein Satz ist bedeutet nichts für das LDA-Verfahren. Wir müssen den Algorithmus nur mit einer Liste der vorhandenen Wörter füttern. Dieser Konzept heißt bag-of-words.
+
+Wie auch immer es gibt in dem NLP-BEreich viele pre-processing Prozesse, die dieses bag-of-words bedeutender machen und sie sind ziemlich wichtig für LDA. Ich fasse sie hier kurz zusammen.
+
+Also Tokenization ist nichts anderes die einzelnen Wörter zu trennen und den Text in eine Liste umzuwandeln.
+
+Stop words sind die Wörter in einer Sprache, die der Bedeutung nicht wirklich viel beeinflussen, besonders wenn wir auf die einzelnen Wörter schauen. Präpositionen könnten hier ein Beispiel sein, es gibt unterschiedliche Stop words listen, ich habe an einem Punkt eine akademische Stop-word Liste auf Internet gefunden und seitdem erweitere ich die Liste von dem Keywords, jedes Mal wenn ich derartige neue Wörter finde. Hier sind die roten Wörter, die in meiner stop-word Liste vorhanden waren und wie zu sehen ins werden sie entfernt.
+
+Lemmatization ist ein Verfahren, das die Wörter in ihre Grundförme bringt. Stemming ist auch was ähnliches, es gibt kleine Unterschiede zwischen zwei Begriffe und wie zu sehen sind wird COMMITED commit, TROUBLED trouble usw.
+
+Und zuletzt n-grams konzept ist Grundsätzlich eine Methode of zusammen erscheinende Wörter gemeinsam beizubehalten. In diesem Sinne gibt es bigrams Prozess Wörterpärchen zu finden aber es gibt auch trigrams usw. 
+Hier wurden bigrams und trigrams angewendet, man findet natürlich selten trigrams aber z.b. hier east_asia ein bigram beispiel geworden.
+
+Schlussendlich, was wir dem Algorithmus geben ist eine sogenannte Document-term Matrix
+
+Die Spalten hier sind die Wörter, die überhaupt in dem Korpus vorhanden sind, das wird Vocabulary benannt und die Zeilen sind die einzelnen Dokumente. In den Zellen sehen wir wie oft jedes in dem Dokument beobachtet sind.
+
+
+### 2.4. LDA Modell/ Parametern 
+
+Ok, nun kommen zu dem Beginn von dem Prozess. 
+
+Es gibt viele Parametern zu kontrollieren aber ich zeige hier einige, die ich soweit oft benutzt habe.
+
+Erstens wurden die Wörter ausgeschlossen, die in zu vielen Dokumente vorhanden waren. Die Annahme war, dass sie keine karakteristischen Wörter sein könnten, wenn sie so oft auf treten.
+
+Umgekehrt kann man auch einstellen aber ich denke es ist eigentlich besser niche Wörter beizubehalten.
+
+Unser K, die Anzahl der Topics wurde 22 ausgewählt, ich sage gleich warum. 
+
+Iterations sind die Anzahl der Zyklen wir durchführen wollen. 1000 ausgewählt, weill höhere Werte keinen signifikanten Unterschied gemacht haben.
+
+Die Parametern Alpha und Beta sind auch zentral zu LDA, ganz in generell wird Alpha höher definiert, wenn wir in der Meinung sind das es eine hohe Mischung von den Topics in den Documents beinhaltet werden sollte und Beta wird höher definiert, wenn wir schätzen, dass die einzelnen Dokumente eigentlich einen großen Teil der Wörter in unserem Vocabulary enthalten.
+
+
+Ok, Coherence estimation. Das ist eine Methode die Konsistenz eines Modells zu bestimmen. Es gibt auch andere Methoden das zu schätzen aber generell funktionieren sie ähnlich.  
+
+### 2.5 LDA Modell | Ergebnis
+
+Hier bedeuten die Achsen nichts spezifisches. Es ist mehr wie, dass die Visualisierung versucht durch die Ähnlichkeiten und Unterschiede zwischen den Topics die Distanzen zu bestimmen aber weil sie vieldimensionale Objekte sind, können wir auf einer zwei dimensionalen Ebene nur approximieren. Wir können aber sagen dass die nähere Topics thematisch näher sein sollen.
+
+Die Größe von dem Topics bedeutet wie Präsent jedes Topic in unserem Korpus ist. Dieses Modell ist ein bisschen zu schön geworden, normalerweise sollte es mehr Unterschiede zwischen den Größen geben.
+
+Hier haben wir einen Lambda Wert, ich finde das wirklich cool. 
+Ein reduzierter Lambda Wert zeigt uns mehr charackteristische Wörter in einem bestimmten Topic. Also die Wörter, die viel in einem Topic vorhanden sind und nicht viel in den anderen. Die Behauptung von den Entwicklern dieses Tool ist, dass der optimale WErt 0.6 ist aber machen wir das 0.4, damit wir wirklich die Unterschiede sehen.
+
+## 3. Kritische Punkte
+
+Schlussendlich will ich über einige kritische Themen über LDA und topic modelling sprechen aber bevor wir darein gehen will ich kurz 2 andere Varianten von LDA erwähnen.
+Diese versuchen bestimmte Mangeln von LDA zu lösen.
+
+### 3.1. Andere LDA Varianten
+
+
+Ich habe diese auch in meiner Recherche für Lunchtalk gefunden. Ich habe sie noch nicht testen können.
+
+Besonders finde ich Structural Topic Modelling hier interessant. Die Entwicklern sind 3 Politikwissenschaftlern und Was das eigentlich macht ist fast gleich wie LDA aber zusätzlich beachtet die Methode auch Metadata wie Jahr, Ort usw.
+
+Bei dem Bespiel von den Entwicklern analysieren sie politische blog posts in einem bestimmten ZEitraum und finden heraus in welchen Zeiträumen welche Topics populär waren und wie sich die Populärität von diesen Themen mit der Zeit geändert worden.
+
+(Roberts et al. 2015)
+
+Ich werde nächstens mit dieser MEthoode Experimentieren. Vielleciht interessant, ich habe was ähnliches vorher versuch um die Texte über Pariser Commune zu analysieren. Pariser Commune ist ein Ereignis zu dem ich immer wieder zurück komme und an der Uni hab ich auch letztens ein bischen weitere Literatür darüber gelesen und wollte sehen, ob ich modellieren kann wie die Diskussion in der Linke sich mit der Zeit geändert hat. Es hat natürlich mit dem gewöhnlichen LDA nicht so gut funktioniert. Jetzt werde ich einmal auch mit dem STM probieren.
+
+Das andere ist short text LDA, das ist für kürzere Dokumente, weil ich weiß nicht, ob ich gemeint habe aber LDA funktioniert nicht so gut mit den kurzen Texte.
+
+Übrigens, beide sind R-Pakete, ich weiß, dass wir viele im ZSI haben, die mit R arbeiten, ich würde diesbezüglich gerne im Kontakt bleiben und Infos austauschen.
+
+### 3.2. Einschränkungen
+
+Einiges ist schon erwähnt worden aber es gibt bestimmte wichtige Einschränkungen beim LDA. 
+
+
+Ersten funktioniert es nicht wirklich ohne den Kontext gutzukennen.
+
+False positives sind wirklich einfach zu produzieren. Wir haben immer die NEigung Muster zu finden, wo es keine gibt.
+
+Die Ordnung der Wörter beachtet LDA nicht aber einer könnte argumentieren, dass es ein großer Teil von einem Topic ist.
+
+Die Anzahl der Topics nicht bestimmten zu können ist einfach schwer.
+
+
+
+
+
+
